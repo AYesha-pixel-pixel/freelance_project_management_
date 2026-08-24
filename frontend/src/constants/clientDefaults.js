@@ -1,0 +1,250 @@
+export const INITIAL_CLIENT_SETTINGS = {
+  // General Info
+  companyName: '',
+  tradingName: '',
+  contactName: '',
+  contactEmail: '',
+  contactPhone: '',
+  website: '',
+  industry: 'Technology & Software',
+  status: 'active',
+  clientTier: 'standard',
+  avatarUrl: '',
+
+  // Billing & Invoicing
+  currency: 'USD',
+  billingModel: 'hourly',
+  defaultHourlyRate: 75,
+  defaultProjectBudget: 3000,
+  paymentTerms: 'net_30',
+  taxId: '',
+  billingEmail: '',
+  billingAddress: {
+    street: '',
+    city: '',
+    state: '',
+    postalCode: '',
+    country: 'United States',
+  },
+  autoInvoice: true,
+  applyLateFees: false,
+  lateFeePercent: 1.5,
+  gracePeriodDays: 7,
+
+  // Workflow & Preferences
+  timezone: 'America/New_York (EST)',
+  primaryCommunicationChannel: 'Slack',
+  channelHandle: '',
+  includedRevisions: 2,
+  extraRevisionRate: 65,
+  assetHubUrl: '',
+  requireScopeApproval: true,
+  deadlineBufferDays: 3,
+
+  // Client Portal & Notifications
+  enableClientPortal: true,
+  portalRole: 'collaborator',
+  emailNotifications: {
+    milestoneUpdates: true,
+    invoiceCreated: true,
+    taskComments: false,
+    weeklyProgressDigest: true,
+  },
+
+  // Notes & Contracts
+  ndaSigned: true,
+  ndaSignedDate: '',
+  contractAgreementUrl: '',
+  internalNotes: '',
+};
+
+export const CURRENCY_OPTIONS = [
+  { value: 'USD', label: 'USD - US Dollar ($)' },
+  { value: 'EUR', label: 'EUR - Euro (€)' },
+  { value: 'GBP', label: 'GBP - British Pound (£)' },
+  { value: 'CAD', label: 'CAD - Canadian Dollar (C$)' },
+  { value: 'AUD', label: 'AUD - Australian Dollar (A$)' },
+  { value: 'JPY', label: 'JPY - Japanese Yen (¥)' },
+  { value: 'INR', label: 'INR - Indian Rupee (₹)' },
+  { value: 'SGD', label: 'SGD - Singapore Dollar (S$)' },
+  { value: 'CHF', label: 'CHF - Swiss Franc (CHF)' },
+];
+
+export const BILLING_MODEL_OPTIONS = [
+  { value: 'hourly', label: 'Hourly Rate' },
+  { value: 'fixed', label: 'Fixed Price per Project' },
+  { value: 'retainer', label: 'Monthly Retainer' },
+  { value: 'milestone', label: 'Milestone / Deliverable Based' },
+];
+
+export const PAYMENT_TERMS_OPTIONS = [
+  { value: 'due_on_receipt', label: 'Due Upon Receipt' },
+  { value: 'net_7', label: 'Net 7 Days' },
+  { value: 'net_15', label: 'Net 15 Days' },
+  { value: 'net_30', label: 'Net 30 Days' },
+  { value: 'net_45', label: 'Net 45 Days' },
+  { value: 'net_60', label: 'Net 60 Days' },
+];
+
+export const STATUS_OPTIONS = [
+  { value: 'active', label: 'Active Client' },
+  { value: 'lead', label: 'Prospective / Lead' },
+  { value: 'on_hold', label: 'On Hold' },
+  { value: 'archived', label: 'Archived' },
+];
+
+export const TIER_OPTIONS = [
+  { value: 'standard', label: 'Standard Client' },
+  { value: 'vip', label: 'VIP / High Priority' },
+  { value: 'retainer', label: 'Retainer Partner' },
+  { value: 'non_profit', label: 'Non-Profit / Discounted' },
+];
+
+export const INDUSTRY_OPTIONS = [
+  { value: 'Technology & Software', label: 'Technology & Software' },
+  { value: 'E-commerce & Retail', label: 'E-commerce & Retail' },
+  { value: 'Design & Creative', label: 'Design & Creative' },
+  { value: 'Marketing & Advertising', label: 'Marketing & Advertising' },
+  { value: 'Healthcare & Biotech', label: 'Healthcare & Biotech' },
+  { value: 'Finance & Fintech', label: 'Finance & Fintech' },
+  { value: 'Education & EdTech', label: 'Education & EdTech' },
+  { value: 'Real Estate', label: 'Real Estate' },
+  { value: 'Other', label: 'Other' },
+];
+
+export const TIMEZONE_OPTIONS = [
+  { value: 'America/New_York (EST)', label: 'Eastern Time (US & Canada)' },
+  { value: 'America/Chicago (CST)', label: 'Central Time (US & Canada)' },
+  { value: 'America/Denver (MST)', label: 'Mountain Time (US & Canada)' },
+  { value: 'America/Los_Angeles (PST)', label: 'Pacific Time (US & Canada)' },
+  { value: 'Europe/London (GMT/BST)', label: 'London, Edinburgh (GMT/BST)' },
+  { value: 'Europe/Berlin (CET)', label: 'Berlin, Paris, Amsterdam (CET)' },
+  { value: 'Asia/Dubai (GST)', label: 'Dubai, Abu Dhabi (GST)' },
+  { value: 'Asia/Karachi (PKT)', label: 'Islamabad, Karachi (PKT)' },
+  { value: 'Asia/Kolkata (IST)', label: 'Mumbai, New Delhi (IST)' },
+  { value: 'Asia/Singapore (SGT)', label: 'Singapore, Hong Kong (SGT)' },
+  { value: 'Australia/Sydney (AEST)', label: 'Sydney, Melbourne (AEST)' },
+];
+
+export const COMMUNICATION_CHANNELS = [
+  { value: 'Slack', label: 'Slack' },
+  { value: 'Discord', label: 'Discord' },
+  { value: 'Email', label: 'Email Only' },
+  { value: 'Microsoft Teams', label: 'Microsoft Teams' },
+  { value: 'WhatsApp', label: 'WhatsApp' },
+  { value: 'Telegram', label: 'Telegram' },
+  { value: 'Zoom / Google Meet', label: 'Zoom / Google Meet' },
+];
+
+export const PORTAL_ROLE_OPTIONS = [
+  { value: 'viewer', label: 'Viewer (View tasks & invoices only)' },
+  { value: 'collaborator', label: 'Collaborator (Comment, upload assets, approve milestones)' },
+  { value: 'admin', label: 'Client Admin (Manage client users, invoices & signoffs)' },
+];
+
+export const PRESET_CLIENTS = [
+  {
+    id: 'sample-1',
+    presetName: 'NovaTech Dynamics (Enterprise Tech)',
+    companyName: 'NovaTech Dynamics Inc.',
+    tradingName: 'NovaTech',
+    contactName: 'Sarah Jenkins',
+    contactEmail: 's.jenkins@novatechdynamics.io',
+    contactPhone: '+1 (555) 234-8901',
+    website: 'https://novatechdynamics.io',
+    industry: 'Technology & Software',
+    status: 'active',
+    clientTier: 'vip',
+    avatarUrl: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=120&auto=format&fit=crop&q=80',
+    currency: 'USD',
+    billingModel: 'retainer',
+    defaultHourlyRate: 110,
+    defaultProjectBudget: 8500,
+    paymentTerms: 'net_15',
+    taxId: 'US-987654321',
+    billingEmail: 'accounts@novatechdynamics.io',
+    billingAddress: {
+      street: '450 Innovation Way, Suite 800',
+      city: 'San Francisco',
+      state: 'CA',
+      postalCode: '94105',
+      country: 'United States',
+    },
+    autoInvoice: true,
+    applyLateFees: true,
+    lateFeePercent: 2.0,
+    gracePeriodDays: 5,
+    timezone: 'America/Los_Angeles (PST)',
+    primaryCommunicationChannel: 'Slack',
+    channelHandle: '#ext-freelance-collab',
+    includedRevisions: 3,
+    extraRevisionRate: 95,
+    assetHubUrl: 'https://drive.google.com/drive/folders/novatech-assets',
+    requireScopeApproval: true,
+    deadlineBufferDays: 4,
+    enableClientPortal: true,
+    portalRole: 'collaborator',
+    emailNotifications: {
+      milestoneUpdates: true,
+      invoiceCreated: true,
+      taskComments: true,
+      weeklyProgressDigest: true,
+    },
+    ndaSigned: true,
+    ndaSignedDate: '2025-01-15',
+    contractAgreementUrl: 'https://app.docusign.com/documents/novatech-master-services',
+    internalNotes: 'Prefers weekly syncs on Tuesdays. Fast at reviewing PRs and milestone signoffs. Direct invoices to Sarah and billing department.',
+  },
+  {
+    id: 'sample-2',
+    presetName: 'Bloom Studio (Design & Creative)',
+    companyName: 'Bloom Creative Studio',
+    tradingName: 'Bloom Studio',
+    contactName: 'Elena Rostova',
+    contactEmail: 'elena@bloomstudio.design',
+    contactPhone: '+44 20 7946 0192',
+    website: 'https://bloomstudio.design',
+    industry: 'Design & Creative',
+    status: 'active',
+    clientTier: 'standard',
+    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80',
+    currency: 'GBP',
+    billingModel: 'hourly',
+    defaultHourlyRate: 85,
+    defaultProjectBudget: 4500,
+    paymentTerms: 'net_30',
+    taxId: 'GB-123456789',
+    billingEmail: 'finance@bloomstudio.design',
+    billingAddress: {
+      street: '18 Shoreditch High Street',
+      city: 'London',
+      state: 'Greater London',
+      postalCode: 'E1 6PG',
+      country: 'United Kingdom',
+    },
+    autoInvoice: true,
+    applyLateFees: false,
+    lateFeePercent: 1.5,
+    gracePeriodDays: 7,
+    timezone: 'Europe/London (GMT/BST)',
+    primaryCommunicationChannel: 'Discord',
+    channelHandle: '@elena_bloom',
+    includedRevisions: 2,
+    extraRevisionRate: 75,
+    assetHubUrl: 'https://www.figma.com/@bloomstudio',
+    requireScopeApproval: true,
+    deadlineBufferDays: 2,
+    enableClientPortal: true,
+    portalRole: 'admin',
+    emailNotifications: {
+      milestoneUpdates: true,
+      invoiceCreated: true,
+      taskComments: false,
+      weeklyProgressDigest: true,
+    },
+    ndaSigned: true,
+    ndaSignedDate: '2024-11-20',
+    contractAgreementUrl: 'https://bloomstudio.design/legal/freelance-contract',
+    internalNotes: 'Very visual feedback. Prefers Figma comments rather than emails. All deliverables must include responsive mobile designs.',
+  },
+];
