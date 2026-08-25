@@ -83,3 +83,14 @@ When making changes:
 - Preserve existing functionality.
 - Review the resulting changes before considering the task complete.
 - Run appropriate tests or checks when available.
+
+## Project Development Rules
+
+### 1. Keep client and project data separate
+Client records should contain information that identifies and describes the client. Project-specific information such as billing rates, payment terms, revision limits, workflow preferences, contracts, and project notifications must belong to the individual project rather than the client.
+
+### 2. Forms must define validation and accessibility explicitly
+Every form must use visible labels, appropriate input types, keyboard-accessible controls, and validation errors associated with the relevant fields. Errors must not rely on color alone. Edge cases such as invalid URLs, missing required values, and conditional fields must be handled explicitly.
+
+### 3. Every feature must include verification
+New functionality must include automated tests for important behavior and must pass the project's linting and production build checks before being considered complete. AI-generated code must be reviewed against the requested scope and final diff before committing.
